@@ -29,7 +29,7 @@
 | **Customer Class** | Segment | Сегмент клиента |
 | **Location** | Country, City, State, Postal Code, Region | Географическая информация |
 | **Product** | Category, Sub-Category | Категория и подкатегория товара |
-| **Stats (факты)** | Sales, Quantity, Discount, Profit | Метрики продаж |
+| **Stats** | Sales, Quantity, Discount, Profit | Метрики продаж |
 
 ---
 
