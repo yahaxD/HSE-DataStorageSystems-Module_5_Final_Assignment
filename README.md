@@ -94,19 +94,19 @@ Stage-таблица служит промежуточным слоем межд
 
 ### 2️⃣ Загрузка данных в хабы (HUB)
 
-На этом шаге используем DDM-скрипты load_hub_product.sql, load_hub_location.sql, load_hub_segment.sql, load_hub_shipment.sql, чтобы данные из stage-таблицы преобразовать в хэш-ключи MD5 и загрузить в таблицы HUB_PRODUCT, HUB_LOCATION, HUB_SEGMENT, HUB_SHIPMENT.
+На этом шаге используем DDM-скрипты `load_hub_product.sql`, `load_hub_location.sql`, `load_hub_segment.sql`, `load_hub_shipment.sql`, чтобы данные из stage-таблицы преобразовать в хэш-ключи MD5 и загрузить в таблицы HUB_PRODUCT, HUB_LOCATION, HUB_SEGMENT, HUB_SHIPMENT.
 
 ### 3️⃣ Загрузка данных в линки (LINK)
 
 Таблица LINK_SALE соединяет все хабы и формирует “факт” продажи.
 Хэш-ключ линка строится из комбинации хэш-ключей всех участвующих хабов.
-На этом этапе создаются связи между продуктом, локацией, сегментом и типом доставки c помощью DDM-скрипта load_link_sale.sql
+На этом этапе создаются связи между продуктом, локацией, сегментом и типом доставки c помощью DDM-скрипта `load_link_sale.sql`
 
 ### 4️⃣ Загрузка данных в спутники (SATELLITE)
 
 Спутники содержат описательные и фактологические атрибуты.
 Для каждого спутника вычисляется HashDiff — хэш от всех атрибутов, что позволяет контролировать изменения (SCD Type 2).
-Для заполнения соответсвующих таблиц исползуются следующие DDM-скрипты: load_sat_location_attr.sql, load_sat_product_attr.sql, load_sat_sale_facts.sql
+Для заполнения соответсвующих таблиц исползуются следующие DDM-скрипты: `load_sat_location_attr.sql`, `load_sat_product_attr.sql`, `load_sat_sale_facts.sql`
 
 ### 5️⃣ Проверка результатов
 
