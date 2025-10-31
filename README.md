@@ -53,8 +53,6 @@
 #### **Спутники**
 | Спутник | Привязан к | Содержит | Комментарий |
 |----------|-------------|-----------|-------------|
-| `SAT_SHIPMENT_INFO` | HUB_SHIPMENT | Описание способа доставки | Атрибуты справочника |
-| `SAT_SEGMENT_INFO` | HUB_SEGMENT | Название и тип сегмента клиента | Атрибуты справочника |
 | `SAT_PRODUCT_ATTR` | HUB_PRODUCT | Category, Sub-Category | Атрибуты товара |
 | `SAT_LOCATION_ATTR` | HUB_LOCATION | Country, State, City, Region, Postal Code | Географические атрибуты |
 | `SAT_SALE_FACTS` | LINK_SALE | Sales, Quantity, Discount, Profit | Фактические показатели продаж |
